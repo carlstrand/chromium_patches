@@ -1,4 +1,4 @@
-From 5b153c8ad2da7b95090a49a211c9c66ebb4490c0 Mon Sep 17 00:00:00 2001
+From 0692041aba59ebfcad47acedea9a5456532a6e22 Mon Sep 17 00:00:00 2001
 From: Daniel Micay <danielmicay@gmail.com>
 Date: Thu, 22 Dec 2016 07:15:34 -0500
 Subject: [PATCH 18/23] enable -fwrapv in non-UBSan builds for clang
@@ -8,20 +8,20 @@ Subject: [PATCH 18/23] enable -fwrapv in non-UBSan builds for clang
  1 file changed, 4 insertions(+)
 
 diff --git a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
-index 8300e4766d9d..69085d809865 100644
+index 28ad4b61e4a8..c8c54c319c16 100644
 --- a/build/config/compiler/BUILD.gn
 +++ b/build/config/compiler/BUILD.gn
-@@ -262,6 +262,10 @@ config("compiler") {
-         cflags += [ "-fstack-protector-strong" ]
+@@ -259,6 +259,10 @@ config("compiler") {
        }
      }
-+
+ 
 +    if (is_clang && !is_ubsan && !is_ubsan_security) {
 +      cflags += [ "-fwrapv" ]
 +    }
-   } else {
-     cflags += [
-       # Assume UTF-8 by default to avoid code page dependencies.
++
+     # Linker warnings.
+     if (fatal_linker_warnings && !(is_chromeos && current_cpu == "arm") &&
+         !(is_android && use_order_profiling) && !is_mac && !is_ios &&
 -- 
-2.17.1
+2.18.0
 

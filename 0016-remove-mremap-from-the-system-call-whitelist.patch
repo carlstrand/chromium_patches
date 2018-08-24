@@ -1,4 +1,4 @@
-From 4bbbdc9a98606424b60f0d118c6183932d05d983 Mon Sep 17 00:00:00 2001
+From c6ae7f7fdede052b0262b006fd4985f459efdf7f Mon Sep 17 00:00:00 2001
 From: Daniel Micay <danielmicay@gmail.com>
 Date: Fri, 18 Nov 2016 10:53:56 -0500
 Subject: [PATCH 16/23] remove mremap from the system call whitelist
@@ -72,5 +72,5 @@ index 1b2c0fda4c2d..57b0f31fb91e 100644
      case __NR_pwrite64:
      case __NR_sysinfo:
 -- 
-2.17.1
+2.18.0
 

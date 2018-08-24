@@ -1,4 +1,4 @@
-From 5ab4719244c06af7517bd96ee68d0161d1a71633 Mon Sep 17 00:00:00 2001
+From 5023ea113ca55df92f80c5ad6597a6242a5f1468 Mon Sep 17 00:00:00 2001
 From: Daniel Micay <danielmicay@gmail.com>
 Date: Mon, 28 Nov 2016 15:49:09 -0500
 Subject: [PATCH 19/23] add DuckDuckGo as the default search engine
@@ -10,7 +10,7 @@ Subject: [PATCH 19/23] add DuckDuckGo as the default search engine
  3 files changed, 121 insertions(+), 110 deletions(-)
 
 diff --git a/components/search_engines/prepopulated_engines.json b/components/search_engines/prepopulated_engines.json
-index b575eb845b5b..5d9720860b46 100644
+index 4571a4ca4f34..05f9bed035ab 100644
 --- a/components/search_engines/prepopulated_engines.json
 +++ b/components/search_engines/prepopulated_engines.json
 @@ -10,7 +10,7 @@
@@ -714,5 +714,5 @@ index 0c686f6ebda2..d287c4f0d611 100644
      &yahoo, &yahoo_ar, &yahoo_at, &yahoo_au, &yahoo_br, &yahoo_ca, &yahoo_ch,
      &yahoo_cl, &yahoo_co, &yahoo_de, &yahoo_dk, &yahoo_es, &yahoo_fi, &yahoo_fr,
 -- 
-2.17.1
+2.18.0
 
